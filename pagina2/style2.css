@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+/*body configs*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 69px;
+    justify-content: center;
+    background-color: #FAFAFA;
+}
+
+.top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 69px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EC362D;
+    color: #FFFFFF;
+    z-index: 3;
+    font-size: 37px;
+    font-weight: 700;
+}
+
+/*banner*/
+
+.banner{
+    background-image: url(/img/exemple.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 227px;
+    display: flex;
+    object-fit: cover;
+
+    /*Header quizz question page*/
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 46px;
+}
+
+/*questions*/
+
+.questionZone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.questionArea{
+    height: 676px;
+    width: 759px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-top: 45px;
+}
+
+.questionHeader{
+    width: 688.16px;
+    height: 137.99px;
+    background-color: #434CA0;
+    margin-bottom: 18px;
+
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.questionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 27px;
+}
+
+.questionBody{
+    display: flex;
+    flex-direction: column;
+}
+
+.answer{
+    width: 329px;
+    height: 175px;
+    cursor: pointer;
+}
+
+.imgAnswer{
+    width: 100%;
+    height: 100%;
+}
+
+.answerText{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 7px;
+    align-items: center;
+}
+
+/*questions selected*/
+
+.unselectedImg{
+    opacity: 0.3;
+}
+
+.selectedText{
+    color: #009C22;
+}
+
+.wrongText{  /*aparece ao fim do quizz para mostrar oque estava errado*/
+    color: #FF4B4B;
+}
+
+/*Final quizz*/
+
+.finalquizzArea{
+    margin-top: 44px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 57px;
+
+    width: 759px;
+    height: 430px;
+}
+
+.finalquizzHeader{
+    width: 727px;
+    height: 99px;
+    background-color: #EC362D;;
+    margin-bottom: 18px;
+    margin-top: 18px;
+
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finalBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.imgfinalquizzArea{
+    width: 364px;
+    height: 273px;
+}
+
+.imgFinalQuizz{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.finalquizzTextArea{
+    width: 328px;
+    height: 250px;
+}
+
+.finalquizzText{
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: start;
+}
+
+/*buttons*/
+
+.resetQuizz{
+    cursor: pointer;
+    background: #EC362D;
+    height: 52px;
+    width: 260.38px;
+    color: #FFF5F4;
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.backtoHome{
+    cursor: pointer;
+    color: #818181;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 85px;
+}
+
+/*Mobile*/
+@media (max-width:1100px){
+    
+    .questionArea{
+        
+    }
+
+    .finalquizzArea{
+
+    }
+
+    .imgfinalquizzArea{
+        
+    }
+}
