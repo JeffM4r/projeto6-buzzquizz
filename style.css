@@ -122,6 +122,8 @@ h2{
 
 .quizz > h3{
     position: absolute;
+    overflow-wrap: break-word;
+    max-width: 333px;
     left: 5px;
     bottom: 10px;
     font-weight: 400;

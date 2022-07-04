@@ -19,6 +19,7 @@ body{
 
 .banner{
     margin-top: 69px;
+    margin-bottom: 42px;
     height: 227px;
     display: flex;
     object-fit: cover;
