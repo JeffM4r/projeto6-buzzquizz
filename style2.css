@@ -97,7 +97,7 @@ body{
     padding: 20px;
 }
 
-.questionContainer{
+[class^='questionContainer'], [class*='questionContainer']{
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between;
