@@ -92,7 +92,7 @@ function openQuizz(selecionado) {
     } 
 
     document.querySelector(".banner").innerHTML =
-        `
+    `
     <h2 class="bannerText">${quizzBody.title}</h2>
     <div class="gradient"></div>
     <img src="${quizzBody.image}" class="bannerImg">
@@ -100,6 +100,8 @@ function openQuizz(selecionado) {
     let banner = document.querySelector(".banner")
     banner.classList.remove("none")
     window.scrollTo(0, 0);
+
+    shufleAnswers();
 }
 
 function shufleAnswers() {
@@ -108,30 +110,22 @@ function shufleAnswers() {
 
 function selecionarResposta(selecionado) {
 
-    selecionado.subling
 }
 
 
 
 function quizzResult() {
-                `
-                    <div class="finalquizzArea">
-                        <div class="finalquizzHeader"><h3 class="finaltittlequiz">25% de Acerto: Para ser o chefe, você tem que vencer o chefe!</h3></div>
-                        <div class="finalBody">
-                            <div class="imgfinalquizzArea">
-                                <img src="imgs/exemple.jpg" class="imgFinalQuizz">
-                            </div>
-                            <div class="finalquizzTextArea"><p class="finalquizzText">Você ainda não esta pronto para ser chefe, tem que começar a chefear bastante para ser chefe e chefiar como um chefe, meu chefe.</p></div>
-                        </div>
-                    </div> 
-
-                    <div class="resetQuizz">
-                        <p>Reiniciar Quizz</p>
-                    </div>
-
-                    <div class="backtoHome">
-                        <p>Voltar pra home</p>
-                `
+    `
+     <div class="finalquizzArea">
+         <div class="finalquizzHeader"><h3 class="finaltittlequiz">25% de Acerto: Para ser o chefe, você tem que vencer o chefe!</h3></div>
+            <div class="finalBody">
+                <div class="imgfinalquizzArea">
+                    <img src="imgs/exemple.jpg" class="imgFinalQuizz">
+                </div>
+            <div class="finalquizzTextArea"><p class="finalquizzText">Você ainda não esta pronto para ser chefe, tem que começar a chefear bastante para ser chefe e chefiar como um chefe, meu chefe.</p></div>
+        </div>
+    </div> 
+    `
 }
 
 function forma() {
