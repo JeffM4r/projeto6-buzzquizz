@@ -24,7 +24,7 @@ body{
     display: flex;
     object-fit: cover;
     width: 100vw;
-    
+
     /*Header quizz question page*/
     color: white;
     align-items: center;
@@ -44,7 +44,7 @@ body{
 
 .bannerImg{
     height: 100%;
-    width: 100%;
+    width: 100vw;
     object-fit: cover;
     z-index: 0;
     filter: brightness(60%);
@@ -113,23 +113,22 @@ body{
 
 .answer{
     width: 100%;
-    height: 250px;
+    height: 350px;
 }
 
 .imgAnswer{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .answerText{
     width: 100%;
     font-weight: 700;
-    font-size: 1vw;
+    font-size: 1.2vw;
     line-height: 23px;
     margin-bottom: 6px;
     overflow-wrap: break-word;
-    
-    
 }
 
 
