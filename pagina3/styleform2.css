@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
 
-body{
-    font-family: 'Roboto', sans-serif;
-    margin-top: 90px;
-    display: flex;
-    justify-content: center;
-    background-color: #FAFAFA;
+html{
+    -webkit-tap-highlight-color: transparent;
 }
 
 .top{
@@ -23,6 +19,14 @@ body{
     font-size: 37px;
     font-weight: 700;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form2{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA;
 }
 
 /*Crie suas perguntas*/
@@ -50,7 +54,7 @@ body{
 
 .inputFormQuestionsArea{
     background-color: white;
-    width: 600px;
+    width: 50vw;
     height: 825px;
     display: flex;
     justify-content: center;
@@ -65,11 +69,22 @@ body{
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
+}
+
+.questionOne > .inputFormQuestionsTittle{
+    margin-bottom: 12px;
+}
+
+.wrongQuestion > .inputFormQuestionsTittle{
+    margin-bottom: 12px;
+}
+
+.correctQuestion > .inputFormQuestionsTittle{
     margin-bottom: 12px;
 }
 
 .inputFormQuestions{
-    width: 564px;
+    width: 48vw;
     height: 46px;
     border: 1px solid #D1D1D1;
     border-radius: 5px;
@@ -89,7 +104,7 @@ body{
 }
 
 .continueNivelsButton{
-    width: 353.91px;
+    width: 35vw;
     height: 54px;
     background: #EC362D;
     border-radius: 15px;
@@ -100,12 +115,13 @@ body{
     color: #FFF5F4;
     cursor: pointer;
     margin-top: 85px;
+    padding: 5px;
 }
 
 .formClosedQuestion{
     background-color: white;
     margin-top: 24px;
-    width: 601px;
+    width: 50vw;
     height: 74px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -125,4 +141,24 @@ body{
 .editIcon{
     width: 26px;
     height: 23px;
+}
+
+@media (max-width:1100px){
+
+    .inputFormQuestionsArea{
+        width: 95vw;
+    }
+
+    .inputFormQuestions{
+        width: 90vw;
+    }
+
+    .formClosedQuestion{
+        width: 95vw;
+    }
+
+    .continueNivelsButton{
+        margin-top: 30px;
+        width: 50vw;
+    }
 }

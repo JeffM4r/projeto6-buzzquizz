@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
 
-body{
-    font-family: 'Roboto', sans-serif;
-    margin-top: 90px;
-    display: flex;
-    justify-content: center;
-    background-color: #FAFAFA;
+html{
+    -webkit-tap-highlight-color: transparent;
 }
 
 .top{
@@ -23,6 +19,14 @@ body{
     font-size: 37px;
     font-weight: 700;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form1{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA;
 }
 
 /*Comece pelo começo*/
@@ -50,7 +54,7 @@ body{
 
 .inputFormBeginArea{
     background-color: white;
-    width: 600px;
+    width: 50vw;
     height: 256px;
     display: flex;
     justify-content: center;
@@ -62,7 +66,7 @@ body{
 }
 
 .inputFormBegin{
-    width: 564px;
+    width: 42vw;
     height: 46px;
     border: 1px solid #D1D1D1;
     border-radius: 5px;
@@ -77,7 +81,7 @@ body{
 }
 
 .continueQuestionsButton{
-    width: 353.91px;
+    width: 35vw;
     height: 54px;
     background: #EC362D;
     border-radius: 15px;
@@ -88,4 +92,22 @@ body{
     color: #FFF5F4;
     cursor: pointer;
     margin-top: 85px;
+    padding: 5px;
+}
+
+
+@media (max-width:1100px){
+    .inputFormBeginArea{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .inputFormBegin{
+        width: 80vw;
+    }
+
+    .continueQuestionsButton{
+        margin-top: 30px;
+        width: 50vw;
+    }
 }
