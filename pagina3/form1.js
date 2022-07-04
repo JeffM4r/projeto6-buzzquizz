@@ -10,6 +10,7 @@ let quantNivelQuizzForm1
 
 let quantQuestionQuizzNumber
 let quantNivelQuizzNumber
+let urlConfirm
 
 function saveValues(){
 
@@ -21,44 +22,45 @@ function saveValues(){
     quantQuestionQuizzNumber = parseInt(quantQuestionQuizzForm1)
     quantNivelQuizzNumber = parseInt(quantNivelQuizzForm1)
 
-    if(tittleQuizzForm1 !== "" && urlQuizzForm1 !== "" &&  quantQuestionQuizzNumber === Number && quantNivelQuizzNumber === Number){
-        console.log("Ok!")
-    }
-
-    else if(tittleQuizzForm1 === "" || urlQuizzForm1 === "" || quantQuestionQuizzForm1 === "" || quantNivelQuizzForm1 === ""){
+    if(tittleQuizzForm1 === "" || urlQuizzForm1 === "" || quantQuestionQuizzForm1 === "" || quantNivelQuizzForm1 === ""){
         alert("Preencha todos campos do formulário!")
     }
 
-    else if(quantQuestionQuizzNumber !== Number || quantNivelQuizzNumber !== Number){
-        console.log("Quantidade de questões tem que ser um numero!")
-        console.log(quantQuestionQuizzNumber)
-        console.log(quantNivelQuizzNumber)
+    else if( isNaN(quantQuestionQuizzNumber) || isNaN(quantNivelQuizzNumber)){
+        alert("Apenas numeros nas zonas de quantidade de perguntas e níveis do quizz!")
     }
+
+    else{
+        if(tittleQuizzForm1.length < 20){
+            alert("Título precisa de no mínimo 20 caracteres")
+        }
+        else if(checkUrl(urlQuizzForm1) !== true){
+            alert("URL Inválido! É nescessário adicionar URL com informaões corretas: HTTP(s)://")
+        }
+
+        else if(quantQuestionQuizzNumber < 3){
+            alert("É preciso de no mínimo 3 perguntas!")
+        }
+
+        else if(quantNivelQuizzNumber < 2){
+            alert("É preciso de no mínimo 2 níveis!")
+        }
+
+        else{
+            alert("Todos os dados estão válidos!")
+        }
+
+    }
+
 }
 
-// function reciveForm1() {
-//     promisse = axios.post(quizzSend)  //post dando error, mas funciona com get (?)
+function checkUrl(urlQuizzForm1) {
+    try {
+     let url = new URL(urlQuizzForm1)
+     return true
+   } catch(err) {
+       return false
+   }
+ }
 
-//     promisse.then(confirmation)
-//     promisse.catch(erropost)
-// }
 
-
-// function confirmation (){
-//     console.log("Thats Ok")
-
-//     let tittlequizzform1 = document.querySelector(".tittlequizzform1").value
-//     let urlquizzform1 = document.querySelector(".urlquizzform1").value
-//     let quantquestionquizzform1 = document.querySelector(".quantquestionquizzform1").value
-//     let quantnivelquizzform1 = document.querySelector(".quantnivelquizzform1").value
-
-//     const sendArray = {
-//         tittle: tittlequizzform1,
-//         image: urlquizzform1,
-        
-//     }
-// }
-
-// function erropost (){
-//     console.log("Error")
-// }
