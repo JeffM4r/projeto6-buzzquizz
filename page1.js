@@ -1,4 +1,5 @@
 let quizzList = "https://mock-api.driven.com.br/api/v7/buzzquizz/quizzes"
+let titleImg;
 
 function loadpage(){
    let teste = axios.get(quizzList);
@@ -6,15 +7,18 @@ function loadpage(){
 }
 
 function showQuizz(content){
-    let titleImg = content.data
+    titleImg = content.data
     let quizz = document.querySelector(".generalquizz")
+    
     
     for(let i = 0; i < titleImg.length; i++){
 
         quizz.innerHTML +=`
-            <div onclick="openQuizz()" class="quizz">
+            <div onclick="openQuizz(this)" class="quizz">
                 <img src="${titleImg[i].image}" alt="">
-                <div class="gradient"></div>
+                <div class="gradient">
+                    <p class="none">${titleImg[i].id}</p>
+                </div>
                 <h3>${titleImg[i].title}</h3>
             </div>
         ` 
