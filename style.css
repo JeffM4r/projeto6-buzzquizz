@@ -153,6 +153,10 @@ h2{
     .quizz{
         width: 100%;
     }
+    .quizz > h3{
+        overflow-wrap: break-word;
+        max-width: 98%;
+    }
 
     .quizz > img{
         width: 100%;  
