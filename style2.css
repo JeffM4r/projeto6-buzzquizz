@@ -127,6 +127,8 @@ body{
     font-size: 1vw;
     line-height: 23px;
     margin-bottom: 6px;
+    overflow-wrap: break-word;
+    
     
 }
 
@@ -258,7 +260,7 @@ body{
         font-size: 2.5vw;
      }
      
-     .questionContainer{
+    [class^='questionContainer'], [class*='questionContainer']{
          width: 100%;
      }
      
