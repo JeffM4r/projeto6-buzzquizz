@@ -1,18 +1,23 @@
-let quizzSend = "https://mock-api.driven.com.br/api/v7/buzzquizz/quizzes"
 
+/*functionamento do botão*/
 let continueQuestionsButton = document.querySelector(".continueQuestionsButton")
 continueQuestionsButton.addEventListener("click", saveValues)
 
-let tittleQuizzForm1
-let urlQuizzForm1 
-let quantQuestionQuizzForm1 
-let quantNivelQuizzForm1
+/*variaveis*/
 
-let quantQuestionQuizzNumber
-let quantNivelQuizzNumber
-let urlConfirm
+let tittleQuizzForm1 //valor titulo
+let urlQuizzForm1 //identificador de url (precisa de https://)
+let quantQuestionQuizzForm1  //numero de questões em string
+let quantNivelQuizzForm1 //numero de questões em string
 
-function saveValues(){
+//convertidos para int:
+
+let quantQuestionQuizzNumber //numero de questões em number
+let quantNivelQuizzNumber //numero de niveis em number
+
+/*funções*/
+
+function saveValues(){  //validação de dados
 
     let tittleQuizzForm1 = document.querySelector(".tittlequizzform1").value
     let urlQuizzForm1 = document.querySelector(".urlquizzform1").value
@@ -54,7 +59,7 @@ function saveValues(){
 
 }
 
-function checkUrl(urlQuizzForm1) {
+function checkUrl(urlQuizzForm1) { //identificador de url
     try {
      let url = new URL(urlQuizzForm1)
      return true
